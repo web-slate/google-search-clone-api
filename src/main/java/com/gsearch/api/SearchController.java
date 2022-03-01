@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class gsearchController {
+public class SearchController {
 
     /**
      *

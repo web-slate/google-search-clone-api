@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GooglesearchapiApplication {
+public class SearchapiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(GooglesearchapiApplication.class, args);
+        SpringApplication.run(SearchapiApplication.class, args);
     }
 
 }
