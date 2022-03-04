@@ -1,12 +1,10 @@
 package com.gsearch.config;
 
-import org.springdoc.core.GroupedOpenApi;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springdoc.core.*;
+import org.springframework.context.annotation.*;
 
-import io.swagger.v3.oas.models.Components;
-import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.*;
+import io.swagger.v3.oas.models.security.*;
 
 @Configuration
 public class SwaggerConfig {
