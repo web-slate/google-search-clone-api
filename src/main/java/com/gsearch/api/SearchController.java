@@ -13,17 +13,20 @@ public class SearchController {
 
 	/**
 	 *
-	 * @param searchterm
+	 * @param searchTerm
 	 * @return
 	 * @throws JsonProcessingException
 	 */
 	@GetMapping(value = "/search")
-	public ResponseEntity<?> search(@RequestParam String searchterm) throws JsonProcessingException {
+	public ResponseEntity<?> search(@RequestParam String searchTerm) {
 		List<Data> searchResponse = testData();
-		Optional<Data> matchingObject = searchResponse.stream().filter(p -> p.getTitle().equals(searchterm))
+		Optional<Data> matchingObject = searchResponse.stream().filter(p -> p.getTitle().equals(searchTerm))
 				.findFirst();
-		Data responseData = matchingObject.get();
-		return ResponseEntity.ok().body(responseData);
+		if (matchingObject.isPresent()) {
+			return ResponseEntity.ok().body(matchingObject.get());
+		} else {
+			return ResponseEntity.noContent().build();
+		}
 	}
 
 	public List<Data> testData() {
