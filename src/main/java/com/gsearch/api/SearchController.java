@@ -51,6 +51,13 @@ public class SearchController {
 				"Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
 				"https://www.youtube.com/"));
 
+		searchResponse.add(new Data("amazon",
+				"Enjoy exclusive Amazon Originals as well as popular movies and TV shows. Watch anytime, anywhere. Start your free trial.",
+				"https://www.primevideo.com/"));
+
+		searchResponse.add(new Data("amazon", "News announcements, original stories, and facts about Amazon",
+				"https://www.aboutamazon.com"));
+
 		return searchResponse;
 	}
 
